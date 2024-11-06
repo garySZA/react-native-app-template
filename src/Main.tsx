@@ -3,12 +3,11 @@ import { SafeAreaView, StyleSheet } from 'react-native';
 import { PaperProvider } from 'react-native-paper';
 
 import IonIcon from 'react-native-vector-icons/Ionicons';
+import { CounterScreen } from './presentation/screens';
 
-import { CounterScreen } from './src/presentation/screens';
+const iconProvider = (props: React.ComponentProps<typeof IonIcon>) => <IonIcon { ...props }/>;
 
-const iconProvider = (props: React.ComponentProps<typeof IonIcon>) => <IonIcon { ...props }/>
-
-export const App = () => {
+export const Main = () => {
     return (
         <PaperProvider
           settings={{
